@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        #btn{
+            font-size: 100px;
+            color:maroon
+        }
+        #text{
+            font-size: 90px;
+            margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <button id="btn"> Button clicked</button>
+        <div id="text">Click the button for change in text</div>
+    </div>
+    <script>
+        let arr =["how are you","what is your name",
+        "why should we hire","what are your strenghrts",
+        "what is your favourite place","where are you from",
+         "Good boy",
+         "Welcome"];
+        
+        let bttn = document.getElementById("btn");
+        bttn.addEventListener('click', () => {
+            const randomColor=`#${Math.floor(Math.random() * 16777215).toString(16)}`;
+            const index = Math.floor(Math.random() * arr.length);
+            const word = arr[index];
+            document.getElementById("text").innerHTML = word;
+            document.body.style.backgroundColor=randomColor
+
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
